@@ -1,0 +1,557 @@
+
+/* ========================================
+   1. GLOBAL RESET & BASE STYLES
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+/* ========================================
+   2. SITE HEADER & NAVIGATION
+======================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #FFFFFF;
+    border-bottom: 2px solid #111111;
+}
+
+.navbar {
+    max-width: var(--max-width);
+    min-height: 78px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Logo */
+
+.nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #111111;
+    letter-spacing: 2px;
+}
+
+    .nav-logo::after {
+        content: ".";
+        color: #F5E500;
+        font-size: 2.2rem;
+    }
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    list-style: none;
+}
+
+    .nav-links a {
+        display: inline-block;
+        padding: 0.65rem 1rem;
+        color: #111111;
+        font-size: 0.9rem;
+        font-weight: 700;
+        border-radius: 6px;
+        transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+        .nav-links a:hover {
+            background: #F5E500;
+            color: #111111;
+            transform: translateY(-3px);
+        }
+
+/* Mobile menu button */
+
+.menu-toggle {
+    display: none;
+    border: 2px solid #111111;
+    background: #F5E500;
+    padding: 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .menu-toggle span {
+        display: block;
+        width: 23px;
+        height: 3px;
+        margin: 4px 0;
+        background: #111111;
+    }
+
+/* ========================================
+   3. HERO SECTION
+======================================== */
+
+.hero-section {
+    min-height: 100svh;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 5rem max(5%, calc((100% - 1200px) / 2));
+    background: radial-gradient( circle at 85% 15%, rgba(245, 229, 0, 0.18), transparent 30% ), #111111;
+    color: #FFFFFF;
+}
+
+    /* Decorative yellow circle */
+
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 380px;
+        height: 380px;
+        border-radius: 50%;
+        background: #F5E500;
+        opacity: 0.08;
+        top: -140px;
+        left: -120px;
+    }
+
+/* Content */
+
+.hero-content {
+    max-width: 650px;
+    animation: slideUp 0.9s ease both;
+}
+
+.hero-greeting {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: #F5E500;
+    color: #111111;
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    line-height: 0.98;
+    letter-spacing: -4px;
+    margin-bottom: 1.5rem;
+}
+
+    .hero-content h1 span {
+        display: block;
+        color: #F5E500;
+    }
+
+.hero-content h2 {
+    color: #FFFFFF;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.hero-description {
+    max-width: 500px;
+    color: #BBBBBB;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+
+/* CTA */
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.8rem;
+    background: #F5E500;
+    color: #111111;
+    font-weight: 900;
+    border: 2px solid #F5E500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+    .hero-cta span {
+        font-size: 1.4rem;
+        transition: transform 0.3s ease;
+    }
+
+    .hero-cta:hover {
+        background: transparent;
+        color: #F5E500;
+        transform: translateY(-5px);
+        box-shadow: 6px 6px 0 #F5E500;
+    }
+
+        .hero-cta:hover span {
+            transform: translateX(6px);
+        }
+
+/* ========================================
+   4. HERO PROFILE IMAGE
+======================================== */
+
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideUp 1s ease 0.25s both;
+}
+
+    .hero-image::before {
+        content: "";
+        position: absolute;
+        width: 85%;
+        height: 90%;
+        background: #F5E500;
+        border-radius: 0px;
+        transform: rotate(7deg);
+    }
+
+    .hero-image img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        border: 5px solid #FFFFFF;
+        border-radius: 12px;
+        filter: grayscale(15%);
+        transition: transform 0.4s ease;
+    }
+
+        .hero-image img:hover {
+            transform: rotate(-2deg) scale(1.02);
+        }
+
+/* ========================================
+   5. PAGE LOAD ANIMATIONS
+======================================== */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   6. RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 1.5rem;
+    }
+
+    .nav-links {
+        gap: 0.2rem;
+    }
+
+        .nav-links a {
+            padding: 0.6rem;
+            font-size: 0.8rem;
+        }
+
+    .hero-section {
+        gap: 2rem;
+        padding: 4rem 2rem;
+    }
+
+    .hero-content h1 {
+        letter-spacing: -2px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem 1.5rem;
+        gap: 0.5rem;
+        background: #FFFFFF;
+        border-bottom: 2px solid #111111;
+    }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links a {
+            display: block;
+            font-size: 1rem;
+        }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 4rem 1.5rem;
+        gap: 3rem;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+        .hero-content h1 {
+            font-size: clamp(3rem, 12vw, 5rem);
+        }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-greeting {
+        font-size: 0.75rem;
+    }
+
+    .hero-cta {
+        padding: 0.85rem 1.2rem;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ========================================
+   CREATIVE TYPOGRAPHY SYSTEM
+======================================== */
+
+/* Default typography */
+body {
+    font-family: var(--font-primary);
+}
+
+/* Strong condensed headings */
+h1,
+h2,
+h3,
+.nav-logo {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+}
+
+/* Hero heading */
+.hero-content h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4.5rem, 9vw, 8rem);
+    line-height: 0.88;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+    /* Solid yellow name */
+    .hero-content h1 span {
+        color: #F5E500;
+    }
+
+/* Hollow / outlined typography */
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px #FFFFFF;
+    paint-order: stroke fill;
+}
+
+/* Yellow outlined typography */
+.outline-yellow {
+    color: transparent;
+    -webkit-text-stroke: 2px #F5E500;
+}
+
+/* Section headings */
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Secondary text */
+.hero-content h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ========================================
+   SHARP GEOMETRIC DESIGN
+======================================== */
+
+/* Sharp buttons */
+.hero-cta {
+    border-radius: 0;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Sharp image frame */
+.hero-image img {
+    border-radius: 0;
+    border: 4px solid #FFFFFF;
+}
+
+/* Sharp navigation */
+.nav-links a {
+    border-radius: 0;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Sharp menu button */
+.menu-toggle {
+    border-radius: 0;
+}
+
+/* ========================================
+   OUTLINE TEXT HOVER EFFECT
+======================================== */
+
+.outline-text {
+    transition: color 0.3s ease, -webkit-text-stroke-color 0.3s ease;
+}
+
+    .outline-text:hover {
+        color: #F5E500;
+        -webkit-text-stroke-color: #F5E500;
+    }
+
+
+/* Hero decorative background text */
+.hero-background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-heading);
+    font-size: clamp(7rem, 18vw, 18rem);
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Keep hero content above decorative text */
+.hero-content,
+.hero-image {
+    position: relative;
+    z-index: 1;
+}
+
+    /* Outlined surname */
+    .hero-content h1 .hero-name-outline {
+        display: block;
+        color: transparent;
+        -webkit-text-stroke: 2px var(--color-primary);
+    }
+
+/* Logo accent */
+.nav-logo span {
+    color: var(--color-primary);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 25px;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #FFFFFF;
+    font-family: var(--font-secondary);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    z-index: 2;
+}
+
+    .scroll-indicator span:last-child {
+        color: var(--color-primary);
+        font-size: 1.3rem;
+    }

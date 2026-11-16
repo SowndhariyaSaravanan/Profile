@@ -1,27 +1,30 @@
-css
+
 :root {
-    /* Primary Colors */
-    --color-primary: #2c3e50;
-    --color-primary-light: #3498db;
-    --color-primary-dark: #1a252f;
-    /* Background Colors */
-    --color-bg: #ffffff;
-    --color-bg-secondary: #f8f9fa;
-    --color-bg-card: #ffffff;
-    /* Text Colors */
-    --color-text: #2c3e50;
-    --color-text-secondary: #6c757d;
-    --color-text-inverse: #ffffff;
-    /* Accent & Borders */
-    --color-accent: #e74c3c;
-    --color-border: #dee2e6;
-    --color-shadow: rgba(0, 0, 0, 0.1);
+    /* Brand colours */
+    --color-primary: #F5E500;
+    --color-primary-dark: #D8CA00;
+    --color-bg: #FFFFFF;
+    --color-bg-secondary: #F4F4F4;
+    --color-bg-card: #FFFFFF;
+    /* Text */
+    --color-text: #111111;
+    --color-text-secondary: #555555;
+    --color-text-inverse: #FFFFFF;
+    /* Accent and borders */
+    --color-accent: #F5E500;
+    --color-border: #E5E5E5;
+    --color-shadow: rgba(0, 0, 0, 0.15);
     /* Typography */
-    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-heading: 'Georgia', serif;
+    --font-primary: 'Space Grotesk', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-secondary: 'Oswald', sans-serif;
+    /* Font sizes */
     --font-size-base: 16px;
-    --font-size-h1: 2.5rem;
-    --font-size-h2: 2rem;
+    --font-size-h1: 6rem;
+    --font-size-h2: 3rem;
+    /* Shape system */
+    --border-radius: 0px;
+    --border-radius-small: 2px;
     /* Spacing */
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -29,6 +32,6 @@ css
     --spacing-xl: 4rem;
     /* Layout */
     --max-width: 1200px;
-    --border-radius: 8px;
+    --border-radius: 12px;
     --transition-speed: 0.3s;
 }
