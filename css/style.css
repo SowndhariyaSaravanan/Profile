@@ -394,9 +394,7 @@ button {
 }
 
 
-/* ========================================
-   CREATIVE TYPOGRAPHY SYSTEM
-======================================== */
+/* CREATIVE TYPOGRAPHY SYSTEM */
 
 /* Default typography */
 body {
@@ -456,9 +454,7 @@ h3,
     letter-spacing: 2px;
 }
 
-/* ========================================
-   SHARP GEOMETRIC DESIGN
-======================================== */
+/* SHARP GEOMETRIC DESIGN */
 
 /* Sharp buttons */
 .hero-cta {
@@ -487,9 +483,7 @@ h3,
     border-radius: 0;
 }
 
-/* ========================================
-   OUTLINE TEXT HOVER EFFECT
-======================================== */
+/*  OUTLINE TEXT HOVER EFFECT */
 
 .outline-text {
     transition: color 0.3s ease, -webkit-text-stroke-color 0.3s ease;
@@ -557,9 +551,7 @@ h3,
     }
 
 
-/* ========================================
-   02. PROFESSIONAL JOURNEY
-======================================== */
+/* 02. PROFESSIONAL JOURNEY */
 
 /* Main section */
 .journey-section {
@@ -662,9 +654,7 @@ h3,
     }
 
 
-/* ========================================
-   JOURNEY - MOBILE RESPONSIVENESS
-======================================== */
+/* JOURNEY - MOBILE RESPONSIVENESS */
 
 @media (max-width: 600px) {
 

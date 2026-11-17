@@ -1,0 +1,34 @@
+
+name: Validate HTML & CSS
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install validation dependencies
+        run: npm ci
+
+      - name: Validate HTML
+        run: npm run lint:html
+
+      - name: Validate CSS with CSSLint
+        run: npm run lint:css:legacy
+        continue-on-error: true
+
+      - name: Validate CSS with Stylelint
+        run: npm run lint:css
