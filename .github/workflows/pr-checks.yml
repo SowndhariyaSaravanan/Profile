@@ -1,0 +1,80 @@
+
+name: PR Quality Checks
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  check-html-titles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check all HTML files have title tags
+        run: |
+          for file in *.html; do
+            if ! grep -q "<title>" "$file"; then
+              echo "ERROR: $file is missing <title> tag"
+              exit 1
+            fi
+          done
+          echo "All HTML files have title tags"
+
+  check-image-alt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check images have alt attributes
+        run: |
+          MISSING=$(python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          for file in Path(".").glob("*.html"):
+              content = file.read_text(encoding="utf-8")
+              images = re.findall(r"<img\b[^>]*>", content, re.IGNORECASE | re.DOTALL)
+
+              for image in images:
+                  if not re.search(r"\salt\s*=", image, re.IGNORECASE):
+                      print(f"{file}: {image.strip()}")
+          PY
+          )
+
+          if [ -n "$MISSING" ]; then
+            echo "ERROR: Images missing alt attributes:"
+            echo "$MISSING"
+            exit 1
+          fi
+          echo "All images have alt attributes"
+
+
+  check-no-console-log:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for console.log in JS
+        run: |
+          if grep -rn "console.log" js/*.js; then
+            echo "WARNING: Remove console.log before merging"
+            exit 1
+          fi
+          echo "No console.log found"
+
+  all-checks-passed:
+    runs-on: ubuntu-latest
+    needs: [check-html-titles, check-image-alt, check-no-console-log]
+    if: always()
+    steps:
+      - name: Verify all quality checks passed
+        run: |
+          if [[ "${{ needs.check-html-titles.result }}" != "success" ||
+                "${{ needs.check-image-alt.result }}" != "success" ||
+                "${{ needs.check-no-console-log.result }}" != "success" ]]; then
+            echo "One or more PR quality checks failed."
+            exit 1
+          fi
+          echo "All PR checks passed! Ready for review."
