@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.addEventListener("click", () => {
 
-            console.log("Show More button clicked!");
 
             const timelineContent = button.closest(".timeline-content");
             const moreContent = timelineContent.querySelector(".timeline-more");
