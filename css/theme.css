@@ -3,56 +3,56 @@
        1. PALETTE IDENTITY - DARK THEME
     ======================================== */
 
-    --palette-primary: #080808;
-    --palette-secondary: #FFE500;
-    --palette-tertiary: #F5F5F5;
+    --palette-primary: #160B03;
+    --palette-secondary: #FFD21A;
+    --palette-tertiary: #FFF0C2;
     /* ========================================
        2. BRAND COLORS
     ======================================== */
 
-    --color-primary: #FFE500;
-    --color-primary-light: #FFF066;
-    --color-primary-dark: #D6C000;
-    --color-accent: #FFE500;
+    --color-primary: #FFD21A;
+    --color-primary-light: #FFE680;
+    --color-primary-dark: #D99B00;
+    --color-accent: #FFD21A;
     /* ========================================
        3. BACKGROUND COLORS
     ======================================== */
 
-    --color-bg: #080808;
-    --color-bg-secondary: #242424;
-    --color-bg-card: #303030;
-    --color-bg-dark: #080808;
-    --color-bg-dark-secondary: #242424;
-    --color-hero-glow: rgba(255, 229, 0, 0.15);
+    --color-bg: #160B03;
+    --color-bg-secondary: #241509;
+    --color-bg-card: #301D0B;
+    --color-bg-dark: #100803;
+    --color-bg-dark-secondary: #2B1A0B;
+    --color-hero-glow: rgba(255, 190, 30, 0.32);
     /* ========================================
        4. TEXT COLORS
     ======================================== */
 
-    --color-text: #F5F5F5;
-    --color-text-secondary: #BDBDBD;
-    --color-text-inverse: #080808;
-    --color-text-on-dark: #F5F5F5;
-    --color-text-muted-on-dark: #BDBDBD;
+    --color-text: #FFF0C2;
+    --color-text-secondary: #D6BD91;
+    --color-text-inverse: #160B03;
+    --color-text-on-dark: #FFF0C2;
+    --color-text-muted-on-dark: #CBB58F;
     /* ========================================
        5. NEUTRAL COLORS
     ======================================== */
 
-    --color-gray-100: #303030;
-    --color-gray-200: #424242;
-    --color-gray-300: #555555;
-    --color-gray-400: #BDBDBD;
-    --color-gray-500: #CCCCCC;
-    --color-gray-600: #DDDDDD;
+    --color-gray-100: #301D0B;
+    --color-gray-200: #493018;
+    --color-gray-300: #72502A;
+    --color-gray-400: #B99A65;
+    --color-gray-500: #D6BD91;
+    --color-gray-600: #E8D6B2;
     /* ========================================
        6. BORDERS, SHADOWS & OVERLAYS
     ======================================== */
 
-    --color-border: #424242;
-    --color-border-dark: rgba(255, 255, 255, 0.15);
-    --color-shadow: rgba(0, 0, 0, 0.4);
-    --color-overlay: rgba(0, 0, 0, 0.9);
-    --color-overlay-light: rgba(255, 255, 255, 0.05);
-    --color-overlay-subtle: rgba(255, 255, 255, 0.12);
+    --color-border: #493018;
+    --color-border-dark: rgba(255, 210, 26, 0.2);
+    --color-shadow: rgba(0, 0, 0, 0.55);
+    --color-overlay: rgba(16, 8, 3, 0.92);
+    --color-overlay-light: rgba(255, 210, 26, 0.08);
+    --color-overlay-subtle: rgba(255, 210, 26, 0.15);
     /* ========================================
        7. TYPOGRAPHY
     ======================================== */
