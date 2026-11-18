@@ -984,3 +984,315 @@ html.reveal-enabled .timeline-item {
             transform: none;
         }
 }
+
+/* ========================================
+   08. FAMILY
+======================================== */
+
+.family-section {
+    --family-accent: var(--color-primary);
+    --family-background: var(--color-bg-secondary);
+    --family-text: var(--color-text);
+    --family-border: var(--color-border);
+    background: var(--color-bg);
+    color: var(--family-text);
+}
+
+/* Family banner */
+
+.family-banner {
+    padding: 5rem 5%;
+    background: var(--color-text);
+    color: var(--color-text-inverse);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+    .family-banner::before {
+        content: "";
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        border: 45px solid var(--family-accent);
+        border-radius: 50%;
+        opacity: 0.08;
+        top: -160px;
+        right: -70px;
+    }
+
+    .family-banner .family-container,
+    .family-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        position: relative;
+    }
+
+.family-eyebrow {
+    color: var(--family-accent);
+    font-family: var(--font-secondary);
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+}
+
+.family-banner h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    line-height: 1;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.family-intro {
+    max-width: 550px;
+    margin: 0 auto;
+    color: #CCCCCC;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Family content */
+
+.family-container {
+    padding: 4rem 5%;
+}
+
+.family-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+    .family-header h3 {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .family-header p {
+        color: var(--color-text-secondary);
+        line-height: 1.7;
+    }
+
+/* Family cards grid */
+
+.family-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    perspective: 1200px;
+}
+
+/* Individual flip card */
+
+.family-card {
+    width: 100%;
+    height: 420px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.family-card-inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+}
+
+.family-card.is-flipped .family-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Card front and back */
+
+.family-card-front,
+.family-card-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 1px solid var(--family-border);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.family-card-front {
+    background: var(--family-background);
+}
+
+.family-card-back {
+    background: var(--color-text);
+    color: var(--color-text-inverse);
+    transform: rotateY(180deg);
+    text-align: center;
+    border: 2px solid var(--family-accent);
+}
+
+/* Placeholder silhouette */
+
+.family-placeholder {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    background: var(--color-bg);
+    border: 2px solid var(--family-accent);
+    border-radius: 50%;
+}
+
+.family-silhouette {
+    position: relative;
+    display: block;
+    width: 85px;
+    height: 90px;
+    background: var(--color-text);
+    border-radius: 45% 45% 0 0;
+}
+
+    .family-silhouette::before {
+        content: "";
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        top: -52px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--color-text);
+        border-radius: 50%;
+    }
+
+/* Front card text */
+
+.family-relationship {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.family-card-hint {
+    margin-top: 1rem;
+    color: var(--color-text-secondary);
+    font-family: var(--font-secondary);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+/* Back card text */
+
+.family-card-title {
+    display: block;
+    margin-bottom: 1.5rem;
+    color: var(--family-accent);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+.family-card-description {
+    display: block;
+    color: #DDDDDD;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* Keyboard focus */
+
+.family-card:focus-visible {
+    outline: 3px solid var(--family-accent);
+    outline-offset: 5px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .family-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .family-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 420px;
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .family-banner {
+        padding: 4rem 5%;
+    }
+
+    .family-container {
+        padding: 3rem 5%;
+    }
+
+    .family-header h3 {
+        font-size: 2rem;
+    }
+
+    .family-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .family-card,
+    .family-card:last-child {
+        grid-column: auto;
+        max-width: 100%;
+        height: 400px;
+    }
+
+    .family-card-front,
+    .family-card-back {
+        padding: 1.5rem;
+    }
+
+    .family-card-description {
+        font-size: 0.85rem;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .family-card-inner {
+        transition: none;
+    }
+}
+
+/* Family member illustrations */
+
+.family-member-image {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 2rem;
+    object-fit: cover;
+    border: 2px solid var(--family-accent);
+    border-radius: 50%;
+    background: var(--color-bg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .family-card:hover .family-card-inner {
+        transform: rotateY(180deg);
+    }
+}

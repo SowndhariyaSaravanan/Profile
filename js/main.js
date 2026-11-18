@@ -89,5 +89,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    // Family card flip interaction
+    const familyCards = document.querySelectorAll(".family-card");
+
+    familyCards.forEach((card) => {
+        card.addEventListener("click", () => {
+            const isFlipped = card.classList.toggle("is-flipped");
+
+            card.setAttribute("aria-pressed", isFlipped);
+        });
+    });
 
 });
