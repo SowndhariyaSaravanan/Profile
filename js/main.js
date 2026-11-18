@@ -100,4 +100,60 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // HOBBIES - IMAGE LIGHTBOX
+
+    const hobbyCards = document.querySelectorAll(".hobby-card");
+
+    const hobbyLightbox = document.getElementById("hobbyLightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxTitle = document.getElementById("lightboxTitle");
+    const lightboxDescription = document.getElementById("lightboxDescription");
+    const lightboxClose = document.querySelector(".lightbox-close");
+
+    // Open the lightbox when a hobby card is clicked
+    hobbyCards.forEach((card) => {
+
+        card.addEventListener("click", () => {
+
+            const image = card.querySelector(".hobby-image");
+
+            // Get content from the selected card
+            const title = card.dataset.title;
+            const description = card.dataset.description;
+
+            // Update the lightbox content
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+
+            lightboxTitle.textContent = title;
+            lightboxDescription.textContent = description;
+
+            // Display the modal
+            hobbyLightbox.showModal();
+
+        });
+
+    });
+
+
+    // Close using the close button
+    lightboxClose.addEventListener("click", () => {
+        hobbyLightbox.close();
+    });
+
+
+    // Close when clicking outside the modal content
+    hobbyLightbox.addEventListener("click", (event) => {
+
+        if (event.target === hobbyLightbox) {
+            hobbyLightbox.close();
+        }
+
+    });
+
+
+    // Escape key closes the dialog natively
+    // The browser handles this automatically for <dialog>
+
+
 });

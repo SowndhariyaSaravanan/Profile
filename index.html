@@ -604,9 +604,186 @@
 
 
 
-        <!-- 05. Hobbies -->
+        <!-- 05. Hobbies & Passions -->
         <section id="hobbies" class="hobbies-section">
+
+            <div class="hobbies-container">
+
+                <!-- Section Heading -->
+                <div class="hobbies-header">
+                    <span class="hobbies-label">BEYOND THE EVERYDAY</span>
+
+                    <h2 class="section-title">
+                        MY LITTLE <span class="outline-text">UNIVERSE</span>
+                    </h2>
+
+                    <p>
+                        A little art, a little music, a lot of experiments
+                        and countless ways to turn curiosity into creativity.
+                        Here's a glimpse of the things I love doing.
+                    </p>
+                </div>
+
+
+                <!-- Hobbies Gallery -->
+                <div class="hobbies-grid">
+
+                    <!-- 01. Art Playground -->
+                    <button class="hobby-card hobby-art"
+                            type="button"
+                            data-title="The Art Playground"
+                            data-description="Mandalas, doodles, pencil sketches, digital illustrations, wall paintings and even chalk sculptures. I love exploring different mediums and discovering how one idea can turn into a hundred different creations."
+                            aria-label="Explore The Art Playground">
+
+                        <img src="images/hobbies/art-playground.jpeg"
+                             alt="Collection of mandala art, sketches and illustrations"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">01 / CREATE</span>
+                            <span class="hobby-title">THE ART PLAYGROUND</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+
+                    <!-- 02. Music -->
+                    <button class="hobby-card hobby-music"
+                            type="button"
+                            data-title="Keys & Melodies"
+                            data-description="The keyboard is one of my favourite ways to express myself. From Indian classical compositions to Western classical pieces, I enjoy learning, practising and getting lost in melodies."
+                            aria-label="Explore Keys and Melodies">
+
+                        <img src="images/hobbies/keys-melodies.jpeg"
+                             alt="Musical keyboard with piano keys"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">02 / PLAY</span>
+                            <span class="hobby-title">KEYS & MELODIES</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+
+                    <!-- 03. Makeup & Face Painting -->
+                    <button class="hobby-card hobby-makeup"
+                            type="button"
+                            data-title="Faces as Canvases"
+                            data-description="Bridal makeup, creative makeup and face painting let me experiment with colours, details and imagination. I love the idea of transforming a face into a canvas for something unique."
+                            aria-label="Explore Faces as Canvases">
+
+                        <img src="images/hobbies/faces-as-canvases.jpeg"
+                             alt="Creative makeup and artistic face painting"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">03 / TRANSFORM</span>
+                            <span class="hobby-title">FACES AS CANVASES</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+
+                    <!-- 04. Henna Art -->
+                    <button class="hobby-card hobby-henna"
+                            type="button"
+                            data-title="Henna Stories"
+                            data-description="From intricate bridal mehendi to Arabic patterns and mandala-inspired henna, I enjoy turning simple lines into beautiful designs. Every pattern has its own little story."
+                            aria-label="Explore Henna Stories">
+
+                        <img src="images/hobbies/henna-stories.jpeg"
+                             alt="Intricate bridal henna and mandala designs"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">04 / DETAIL</span>
+                            <span class="hobby-title">HENNA STORIES</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+
+                    <!-- 05. Upcycling & Recycled Art -->
+                    <button class="hobby-card hobby-upcycling"
+                            type="button"
+                            data-title="Second Life Studio"
+                            data-description="Old CDs, PVC pipes, forgotten books, paper, glass bottles, glass plates and even eggshells can become art. I love giving discarded things a second life and finding beauty in the most unexpected materials."
+                            aria-label="Explore Second Life Studio">
+
+                        <img src="images/hobbies/second-life-studio.jpeg"
+                             alt="Handmade recycled art using glass, paper and reused materials"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">05 / REIMAGINE</span>
+                            <span class="hobby-title">SECOND LIFE STUDIO</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+
+                    <!-- 06. Podcasts & Learning -->
+                    <button class="hobby-card hobby-podcasts"
+                            type="button"
+                            data-title="Curious Ears"
+                            data-description="Science, self-growth, women's empowerment and everything in between. I enjoy listening to podcasts that introduce new perspectives, spark questions and leave me with something interesting to think about."
+                            aria-label="Explore Curious Ears">
+
+                        <img src="images/hobbies/curious-ears.jpeg"
+                             alt="Headphones and notebook representing podcast listening"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">06 / DISCOVER</span>
+                            <span class="hobby-title">CURIOUS EARS</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hobby Image Lightbox -->
+            <dialog class="hobby-lightbox"
+                    id="hobbyLightbox"
+                    aria-labelledby="lightboxTitle">
+
+                <button class="lightbox-close"
+                        type="button"
+                        aria-label="Close hobby preview">
+                    &times;
+                </button>
+
+                <div class="lightbox-content">
+
+                    <img src="images/hobbies/art-playground.jpeg"
+                         alt=""
+                         class="lightbox-image"
+                         id="lightboxImage">
+
+                    <div class="lightbox-details">
+                        <span class="lightbox-label">A LITTLE MORE ABOUT IT</span>
+
+                        <h3 id="lightboxTitle"></h3>
+
+                        <p id="lightboxDescription"></p>
+                    </div>
+
+                </div>
+
+            </dialog>
+
         </section>
+
 
     </main>
 
