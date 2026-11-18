@@ -994,6 +994,7 @@ html.reveal-enabled .timeline-item {
     --family-background: var(--color-bg-secondary);
     --family-text: var(--color-text);
     --family-border: var(--color-border);
+
     background: var(--color-bg);
     color: var(--family-text);
 }
@@ -1124,7 +1125,6 @@ html.reveal-enabled .timeline-item {
     padding: 2rem;
     border: 1px solid var(--family-border);
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     overflow: hidden;
 }
 
