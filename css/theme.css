@@ -1,36 +1,181 @@
 
 :root {
-    /* Brand colours */
+    /* ========================================
+       1. PALETTE IDENTITY - LIGHT THEME
+    ======================================== */
+
+    --palette-primary: #F5E500;
+    --palette-secondary: #111111;
+    --palette-tertiary: #FFFFFF;
+    /* ========================================
+       2. BRAND COLORS
+    ======================================== */
+
     --color-primary: #F5E500;
+    --color-primary-light: #FFF566;
     --color-primary-dark: #D8CA00;
+    --color-accent: #F5E500;
+    /* ========================================
+       3. BACKGROUND COLORS
+    ======================================== */
+
     --color-bg: #FFFFFF;
     --color-bg-secondary: #F4F4F4;
     --color-bg-card: #FFFFFF;
-    /* Text */
+    --color-bg-dark: #111111;
+    --color-bg-dark-secondary: #242424;
+    --color-hero-glow: rgba(245, 229, 0, 0.18);
+    /* ========================================
+       4. TEXT COLORS
+    ======================================== */
+
     --color-text: #111111;
     --color-text-secondary: #555555;
     --color-text-inverse: #FFFFFF;
-    /* Accent and borders */
-    --color-accent: #F5E500;
+    --color-text-on-dark: #FFFFFF;
+    --color-text-muted-on-dark: #BBBBBB;
+    /* ========================================
+       5. NEUTRAL COLORS
+    ======================================== */
+
+    --color-gray-100: #F4F4F4;
+    --color-gray-200: #E5E5E5;
+    --color-gray-300: #DDDDDD;
+    --color-gray-400: #CCCCCC;
+    --color-gray-500: #BBBBBB;
+    --color-gray-600: #AAAAAA;
+    /* ========================================
+       6. BORDERS, SHADOWS & OVERLAYS
+    ======================================== */
+
     --color-border: #E5E5E5;
+    --color-border-dark: rgba(255, 255, 255, 0.12);
     --color-shadow: rgba(0, 0, 0, 0.15);
-    /* Typography */
+    --color-overlay: rgba(0, 0, 0, 0.85);
+    --color-overlay-light: rgba(0, 0, 0, 0.05);
+    --color-overlay-subtle: rgba(255, 255, 255, 0.12);
+    /* ========================================
+       7. TYPOGRAPHY
+    ======================================== */
+
     --font-primary: 'Space Grotesk', sans-serif;
     --font-heading: 'Bebas Neue', sans-serif;
     --font-secondary: 'Oswald', sans-serif;
     /* Font sizes */
+
     --font-size-base: 16px;
     --font-size-h1: 6rem;
     --font-size-h2: 3rem;
-    /* Shape system */
-    --border-radius-small: 2px;
-    /* Spacing */
+    /* ========================================
+       8. SPACING
+    ======================================== */
+
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
     --spacing-xl: 4rem;
-    /* Layout */
+    /* ========================================
+       9. LAYOUT
+    ======================================== */
+
     --max-width: 1200px;
+    /* ========================================
+       10. BORDER RADIUS
+    ======================================== */
+
+    --border-radius-small: 2px;
+    --border-radius-medium: 6px;
     --border-radius: 12px;
+    --border-radius-pill: 50%;
+    /* ========================================
+       11. TRANSITIONS
+    ======================================== */
+
     --transition-speed: 0.3s;
+    --transition-speed-slow: 0.6s;
+}
+/* ========================================
+   DARK THEME - ELECTRIC CONTRAST
+======================================== */
+
+[data-theme="dark"] {
+    /* Palette Identity */
+    --palette-primary: #080808;
+    --palette-secondary: #FFE500;
+    --palette-tertiary: #F5F5F5;
+    /* Brand Colors */
+    --color-primary: #FFE500;
+    --color-primary-light: #FFF066;
+    --color-primary-dark: #D6C000;
+    --color-accent: #FFE500;
+    /* Background Colors */
+    --color-bg: #080808;
+    --color-bg-secondary: #242424;
+    --color-bg-card: #303030;
+    --color-bg-dark: #080808;
+    --color-bg-dark-secondary: #242424;
+    --color-hero-glow: rgba(255, 229, 0, 0.15);
+    /* Text Colors */
+    --color-text: #F5F5F5;
+    --color-text-secondary: #BDBDBD;
+    --color-text-inverse: #080808;
+    --color-text-on-dark: #F5F5F5;
+    --color-text-muted-on-dark: #BDBDBD;
+    /* Neutral Colors */
+    --color-gray-100: #303030;
+    --color-gray-200: #424242;
+    --color-gray-300: #555555;
+    --color-gray-400: #BDBDBD;
+    --color-gray-500: #CCCCCC;
+    --color-gray-600: #DDDDDD;
+    /* Borders, Shadows & Overlays */
+    --color-border: #424242;
+    --color-border-dark: rgba(255, 255, 255, 0.15);
+    --color-shadow: rgba(0, 0, 0, 0.4);
+    --color-overlay: rgba(0, 0, 0, 0.9);
+    --color-overlay-light: rgba(255, 255, 255, 0.05);
+    --color-overlay-subtle: rgba(255, 255, 255, 0.12);
+}
+
+/* ========================================
+   WARM THEME - DARK GOLDEN GLOW
+======================================== */
+
+[data-theme="warm"] {
+    /* Palette Identity */
+    --palette-primary: #160B03;
+    --palette-secondary: #FFD21A;
+    --palette-tertiary: #FFF0C2;
+    /* Brand Colors */
+    --color-primary: #FFD21A;
+    --color-primary-light: #FFE680;
+    --color-primary-dark: #D99B00;
+    --color-accent: #FFD21A;
+    /* Background Colors */
+    --color-bg: #160B03;
+    --color-bg-secondary: #241509;
+    --color-bg-card: #301D0B;
+    --color-bg-dark: #100803;
+    --color-bg-dark-secondary: #2B1A0B;
+    --color-hero-glow: rgba(255, 190, 30, 0.32);
+    /* Text Colors */
+    --color-text: #FFF0C2;
+    --color-text-secondary: #D6BD91;
+    --color-text-inverse: #160B03;
+    --color-text-on-dark: #FFF0C2;
+    --color-text-muted-on-dark: #CBB58F;
+    /* Neutral Colors */
+    --color-gray-100: #301D0B;
+    --color-gray-200: #493018;
+    --color-gray-300: #72502A;
+    --color-gray-400: #B99A65;
+    --color-gray-500: #D6BD91;
+    --color-gray-600: #E8D6B2;
+    /* Borders, Shadows & Overlays */
+    --color-border: #493018;
+    --color-border-dark: rgba(255, 210, 26, 0.2);
+    --color-shadow: rgba(0, 0, 0, 0.55);
+    --color-overlay: rgba(16, 8, 3, 0.92);
+    --color-overlay-light: rgba(255, 210, 26, 0.08);
+    --color-overlay-subtle: rgba(255, 210, 26, 0.15);
 }
