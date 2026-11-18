@@ -39,19 +39,19 @@ button {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #FFFFFF;
-    border-bottom: 2px solid #111111;
+    background: var(--color-bg);
+    border-bottom: 2px solid var(--color-text);
 }
 
 .navbar {
     max-width: var(--max-width);
     min-height: 78px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--spacing-lg);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: var(--spacing-lg);
 }
 
 /* Logo */
@@ -60,13 +60,13 @@ button {
     font-family: var(--font-heading);
     font-size: 1.7rem;
     font-weight: 900;
-    color: #111111;
+    color: var(--color-text);
     letter-spacing: 2px;
 }
 
     .nav-logo::after {
         content: ".";
-        color: #F5E500;
+        color: var(--color-accent);
         font-size: 2.2rem;
     }
 
@@ -81,17 +81,17 @@ button {
 
     .nav-links a {
         display: inline-block;
-        padding: 0.65rem 1rem;
-        color: #111111;
+        padding: 0.65rem var(--spacing-md);
+        color: var(--color-text);
         font-size: 0.9rem;
         font-weight: 700;
-        border-radius: 6px;
-        transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        border-radius: var(--border-radius-medium);
+        transition: background var(--transition-speed) ease, color var(--transition-speed) ease, transform var(--transition-speed) ease;
     }
 
         .nav-links a:hover {
-            background: #F5E500;
-            color: #111111;
+            background: var(--color-accent);
+            color: var(--color-text);
             transform: translateY(-3px);
         }
 
@@ -99,10 +99,10 @@ button {
 
 .menu-toggle {
     display: none;
-    border: 2px solid #111111;
-    background: #F5E500;
+    border: 2px solid var(--color-text);
+    background: var(--color-accent);
     padding: 0.6rem;
-    border-radius: 6px;
+    border-radius: var(--border-radius-medium);
     cursor: pointer;
 }
 
@@ -111,7 +111,7 @@ button {
         width: 23px;
         height: 3px;
         margin: 4px 0;
-        background: #111111;
+        background: var(--color-text);
     }
 
 /* ========================================
@@ -128,8 +128,8 @@ button {
     align-items: center;
     gap: 3rem;
     padding: 5rem max(5%, calc((100% - 1200px) / 2));
-    background: radial-gradient( circle at 85% 15%, rgba(245, 229, 0, 0.18), transparent 30% ), #111111;
-    color: #FFFFFF;
+    background: radial-gradient( circle at 85% 15%, var(--color-hero-glow), transparent 30% ), var(--color-bg-dark);
+    color: var(--color-text-on-dark);
 }
 
     /* Decorative yellow circle */
@@ -141,7 +141,7 @@ button {
         width: 380px;
         height: 380px;
         border-radius: 50%;
-        background: #F5E500;
+        background: var(--color-primary);
         opacity: 0.08;
         top: -140px;
         left: -120px;
@@ -156,9 +156,9 @@ button {
 
 .hero-greeting {
     display: inline-block;
-    padding: 0.4rem 1rem;
-    background: #F5E500;
-    color: #111111;
+    padding: 0.4rem var(--spacing-md);
+    background: var(--color-primary);
+    color: var(--color-bg-dark);
     font-size: 0.85rem;
     font-weight: 900;
     letter-spacing: 3px;
@@ -176,11 +176,11 @@ button {
 
     .hero-content h1 span {
         display: block;
-        color: #F5E500;
+        color: var(--color-primary);
     }
 
 .hero-content h2 {
-    color: #FFFFFF;
+    color: var(--color-text-on-dark);
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     font-weight: 600;
     margin-bottom: 1.2rem;
@@ -188,10 +188,10 @@ button {
 
 .hero-description {
     max-width: 500px;
-    color: #BBBBBB;
+    color: var(--color-text-muted-on-dark);
     font-size: 1.05rem;
     line-height: 1.9;
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-lg);
 }
 
 /* CTA */
@@ -199,26 +199,26 @@ button {
 .hero-cta {
     display: inline-flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.8rem;
-    background: #F5E500;
-    color: #111111;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 1.8rem;
+    background: var(--color-primary);
+    color: var(--color-bg-dark);
+    border: 2px solid var(--color-primary);
     font-weight: 900;
-    border: 2px solid #F5E500;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    border-radius: var(--border-radius-medium);
+    transition: all var(--transition-speed) ease;
 }
 
     .hero-cta span {
         font-size: 1.4rem;
-        transition: transform 0.3s ease;
+        transition: transform var(--transition-speed) ease;
     }
 
     .hero-cta:hover {
         background: transparent;
-        color: #F5E500;
+        color: var(--color-primary);
+        box-shadow: 6px 6px 0 var(--color-primary);
         transform: translateY(-5px);
-        box-shadow: 6px 6px 0 #F5E500;
     }
 
         .hero-cta:hover span {
@@ -242,7 +242,7 @@ button {
         position: absolute;
         width: 85%;
         height: 90%;
-        background: #F5E500;
+        background: var(--color-primary);
         border-radius: 0px;
         transform: rotate(7deg);
     }
@@ -254,8 +254,8 @@ button {
         max-width: 400px;
         aspect-ratio: 4 / 5;
         object-fit: cover;
-        border: 5px solid #FFFFFF;
-        border-radius: 12px;
+        border: 5px solid var(--color-text-on-dark);
+        border-radius: var(--border-radius);
         filter: grayscale(15%);
         transition: transform 0.4s ease;
     }
@@ -300,8 +300,8 @@ button {
         }
 
     .hero-section {
-        gap: 2rem;
-        padding: 4rem 2rem;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-xl) var(--spacing-lg);
     }
 
     .hero-content h1 {
@@ -327,10 +327,10 @@ button {
         right: 0;
         flex-direction: column;
         align-items: stretch;
-        padding: 1rem 1.5rem;
-        gap: 0.5rem;
-        background: #FFFFFF;
-        border-bottom: 2px solid #111111;
+        padding: var(--spacing-md) 1.5rem;
+        gap: var(--spacing-sm);
+        background: var(--color-bg);
+        border-bottom: 2px solid var(--color-text);
     }
 
         .nav-links.active {
@@ -345,7 +345,7 @@ button {
     .hero-section {
         grid-template-columns: 1fr;
         text-align: center;
-        padding: 4rem 1.5rem;
+        padding: var(--spacing-xl) 1.5rem;
         gap: 3rem;
     }
 
@@ -412,7 +412,7 @@ h3,
 
 /* Hero heading */
 .hero-content h1 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: var(--font-heading);
     font-size: clamp(4.5rem, 9vw, 8rem);
     line-height: 0.88;
     letter-spacing: 1px;
@@ -421,25 +421,25 @@ h3,
 
     /* Solid yellow name */
     .hero-content h1 span {
-        color: #F5E500;
+        color: var(--color-primary);
     }
 
 /* Hollow / outlined typography */
 .outline-text {
     color: transparent;
-    -webkit-text-stroke: 2px #FFFFFF;
+    -webkit-text-stroke: 2px var(--color-text-on-dark);
     paint-order: stroke fill;
 }
 
 /* Yellow outlined typography */
 .outline-yellow {
     color: transparent;
-    -webkit-text-stroke: 2px #F5E500;
+    -webkit-text-stroke: 2px var(--color-primary);
 }
 
 /* Section headings */
 .section-title {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: var(--font-heading);
     font-size: clamp(3rem, 7vw, 6rem);
     line-height: 0.95;
     text-transform: uppercase;
@@ -448,7 +448,7 @@ h3,
 
 /* Secondary text */
 .hero-content h2 {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--font-secondary);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -459,7 +459,7 @@ h3,
 /* Sharp buttons */
 .hero-cta {
     border-radius: 0;
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--font-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -467,13 +467,13 @@ h3,
 /* Sharp image frame */
 .hero-image img {
     border-radius: 0;
-    border: 4px solid #FFFFFF;
+    border: 4px solid var(--color-text-on-dark);
 }
 
 /* Sharp navigation */
 .nav-links a {
     border-radius: 0;
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--font-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -486,12 +486,12 @@ h3,
 /*  OUTLINE TEXT HOVER EFFECT */
 
 .outline-text {
-    transition: color 0.3s ease, -webkit-text-stroke-color 0.3s ease;
+    transition: color var(--transition-speed) ease, -webkit-text-stroke-color var(--transition-speed) ease;
 }
 
     .outline-text:hover {
-        color: #F5E500;
-        -webkit-text-stroke-color: #F5E500;
+        color: var(--color-primary);
+        -webkit-text-stroke-color: var(--color-primary);
     }
 
 
@@ -504,7 +504,7 @@ h3,
     font-family: var(--font-heading);
     font-size: clamp(7rem, 18vw, 18rem);
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+    -webkit-text-stroke: 1px var(--color-overlay-subtle);
     white-space: nowrap;
     pointer-events: none;
     z-index: 0;
@@ -537,7 +537,7 @@ h3,
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #FFFFFF;
+    color: var(--color-text-on-dark);
     font-family: var(--font-secondary);
     font-size: 0.8rem;
     letter-spacing: 2px;
@@ -569,13 +569,13 @@ h3,
 /* Section heading */
 .journey-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: var(--spacing-xl);
 }
 
     .journey-header h2 {
         font-family: var(--font-heading);
         font-size: clamp(3rem, 6vw, 5rem);
-        margin-bottom: 1rem;
+        margin-bottom: var(--spacing-md);
         letter-spacing: 2px;
     }
 
@@ -597,7 +597,7 @@ h3,
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: var(--spacing-lg) 0;
 }
 
     /* Vertical timeline line */
@@ -667,7 +667,7 @@ h3,
     .timeline-item {
         width: 100%;
         left: 0;
-        padding: 1.5rem 1rem 1.5rem 55px;
+        padding: 1.5rem var(--spacing-md) 1.5rem 55px;
         text-align: left;
     }
 
@@ -692,7 +692,7 @@ h3,
 
     .journey-header p {
         font-size: 0.9rem;
-        padding: 0 0.5rem;
+        padding: 0 var(--spacing-sm);
     }
 }
 
@@ -702,7 +702,7 @@ h3,
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-md);
     border: 2px solid var(--color-primary);
     border-radius: 0;
     padding: 5px;
@@ -721,7 +721,7 @@ h3,
 .show-more-btn {
     display: inline-block;
     margin-top: 0.75rem;
-    padding: 0.5rem 1rem;
+    padding: var(--spacing-sm) var(--spacing-md);
     background: transparent;
     color: var(--color-text);
     border: 1px solid var(--color-primary);
@@ -761,7 +761,7 @@ h3,
 html.reveal-enabled .timeline-item {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity var(--transition-speed-slow) ease, transform var(--transition-speed-slow) ease;
 }
 
     html.reveal-enabled .timeline-item.visible {
@@ -801,7 +801,7 @@ html.reveal-enabled .timeline-item {
 
 .interests-label {
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-md);
     color: var(--color-text-secondary);
     font-family: var(--font-secondary);
     font-size: 0.85rem;
@@ -812,7 +812,7 @@ html.reveal-enabled .timeline-item {
     font-family: var(--font-heading);
     font-size: var(--font-size-h2);
     line-height: 1.1;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-md);
 }
 
     .interests-header h2 span {
@@ -842,7 +842,7 @@ html.reveal-enabled .timeline-item {
     flex-direction: column;
     justify-content: space-between;
     min-height: 300px;
-    padding: 2rem;
+    padding: var(--spacing-lg);
     overflow: hidden;
     background: var(--color-bg-secondary);
     border: 1px solid var(--color-border);
@@ -883,7 +883,7 @@ html.reveal-enabled .timeline-item {
     justify-content: center;
     width: 65px;
     height: 65px;
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-lg);
     background: var(--color-primary);
     color: var(--color-text);
     font-size: 2.5rem;
@@ -903,7 +903,7 @@ html.reveal-enabled .timeline-item {
 
 .interest-psychology .interest-number,
 .interest-feminism .interest-number {
-    color: #CCCCCC;
+    color: var(--color-gray-400);
 }
 
 .interest-card h3 {
@@ -922,7 +922,7 @@ html.reveal-enabled .timeline-item {
 
 .interest-psychology p,
 .interest-feminism p {
-    color: #DDDDDD;
+    color: var(--color-gray-300);
 }
 
 /* Hover interaction */
@@ -1034,7 +1034,7 @@ html.reveal-enabled .timeline-item {
     font-family: var(--font-secondary);
     font-size: 0.85rem;
     letter-spacing: 4px;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-md);
 }
 
 .family-banner h2 {
@@ -1042,13 +1042,13 @@ html.reveal-enabled .timeline-item {
     font-size: clamp(3.5rem, 8vw, 6rem);
     line-height: 1;
     letter-spacing: 2px;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-md);
 }
 
 .family-intro {
     max-width: 550px;
     margin: 0 auto;
-    color: #CCCCCC;
+    color: var(--color-gray-400);
     font-size: 1rem;
     line-height: 1.8;
 }
@@ -1056,7 +1056,7 @@ html.reveal-enabled .timeline-item {
 /* Family content */
 
 .family-container {
-    padding: 4rem 5%;
+    padding: var(--spacing-xl) 5%;
 }
 
 .family-header {
@@ -1067,7 +1067,7 @@ html.reveal-enabled .timeline-item {
     .family-header h3 {
         font-family: var(--font-heading);
         font-size: 2.5rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: var(--spacing-sm);
     }
 
     .family-header p {
@@ -1122,7 +1122,7 @@ html.reveal-enabled .timeline-item {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: var(--spacing-lg);
     border: 1px solid var(--family-border);
     backface-visibility: hidden;
     overflow: hidden;
@@ -1149,7 +1149,7 @@ html.reveal-enabled .timeline-item {
     justify-content: center;
     width: 180px;
     height: 180px;
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-lg);
     overflow: hidden;
     background: var(--color-bg);
     border: 2px solid var(--family-accent);
@@ -1187,7 +1187,7 @@ html.reveal-enabled .timeline-item {
 }
 
 .family-card-hint {
-    margin-top: 1rem;
+    margin-top: var(--spacing-md);
     color: var(--color-text-secondary);
     font-family: var(--font-secondary);
     font-size: 0.75rem;
@@ -1207,7 +1207,7 @@ html.reveal-enabled .timeline-item {
 
 .family-card-description {
     display: block;
-    color: #DDDDDD;
+    color: var(--color-gray-300);
     font-size: 0.9rem;
     line-height: 1.8;
 }
@@ -1238,7 +1238,7 @@ html.reveal-enabled .timeline-item {
 
 @media (max-width: 600px) {
     .family-banner {
-        padding: 4rem 5%;
+        padding: var(--spacing-xl) 5%;
     }
 
     .family-container {
@@ -1284,7 +1284,7 @@ html.reveal-enabled .timeline-item {
 .family-member-image {
     width: 180px;
     height: 180px;
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-lg);
     object-fit: cover;
     border: 2px solid var(--family-accent);
     border-radius: 50%;
@@ -1416,7 +1416,7 @@ html.reveal-enabled .timeline-item {
     position: absolute;
     inset: 0;
     content: "";
-    background: linear-gradient( to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.05) 75% );
+    background: linear-gradient( to top,var(--color-overlay), var(--color-overlay-light) 75%);
     transition: background var(--transition-speed) ease;
 }
 
@@ -1496,7 +1496,7 @@ html.reveal-enabled .timeline-item {
 }
 
     .hobby-lightbox::backdrop {
-        background: rgba(0, 0, 0, 0.85);
+        background: var(--color-overlay);
         backdrop-filter: blur(5px);
     }
 
@@ -1701,7 +1701,7 @@ html.reveal-enabled .timeline-item {
 }
 
 .footer-copyright {
-    color: #AAAAAA;
+    color: var(--color-gray-600);
     font-size: 0.875rem;
 }
 
