@@ -31,4 +31,5 @@ jobs:
         with:
           name: lighthouse-report
           path: ${{ steps.lighthouse.outputs.resultsPath }}
+          include-hidden-files: true
           retention-days: 30
