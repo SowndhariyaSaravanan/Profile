@@ -155,5 +155,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Escape key closes the dialog natively
     // The browser handles this automatically for <dialog>
 
+    // Footer: Dynamic copyright year
+    const copyrightYear = document.getElementById("copyrightYear");
+
+    if (copyrightYear) {
+        copyrightYear.textContent = new Date().getFullYear();
+    }
+
+
+    // Footer: Back to top
+    const backToTop = document.getElementById("backToTop");
+
+    if (backToTop) {
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
 
 });
