@@ -8,49 +8,890 @@
 
     <meta name="description" content="Personal profile website">
 
-    <title>My Profile | Portfolio</title>
+    <title>Sowndhariya Saravanan | Portfolio</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <header>
-        <nav>
-            <!-- Navigation links will go here -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+
+            <!-- Brand / Logo -->
+            <a href="#hero" class="nav-logo">
+                SOWNDHARIYA<span>.</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#family">Family</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
         </nav>
     </header>
 
+
     <main>
 
-        <!-- 01. Hero -->
-        <section id="hero">
+        <!-- 01. Hero Section -->
+        <section id="hero" class="hero-section">
+
+            <!-- Decorative Background Text -->
+            <div class="hero-background-text" aria-hidden="true">
+                CREATIVE
+            </div>
+
+            <!-- Hero Content -->
+            <div class="hero-content">
+
+                <p class="hero-greeting">
+                    HELLO, I'M
+                </p>
+
+                <h1>
+                    SOWNDHARIYA
+                    <span class="hero-name-outline">SARAVANAN</span>
+                </h1>
+
+                <h2>
+                    ASPIRING SOFTWARE DEVELOPER
+                </h2>
+
+                <p class="hero-description">
+                    A Computer Science graduate passionate about
+                    software development, problem-solving and
+                    building meaningful digital experiences.
+                </p>
+
+                <a href="#journey" class="hero-cta">
+                    EXPLORE MY JOURNEY
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+            <!-- Profile Image -->
+            <div class="hero-image">
+                <img src="images/hero/profile.jpeg"
+                     alt="Portrait of Sowndhariya Saravanan">
+            </div>
+
+            <!-- Decorative Scroll Indicator -->
+            <a href="#journey" class="scroll-indicator"
+               aria-label="Scroll to professional journey">
+                <span>SCROLL TO EXPLORE</span>
+                <span aria-hidden="true">↓</span>
+            </a>
+
         </section>
+
 
         <!-- 02. Professional Journey -->
-        <section id="journey">
+        <!-- 02. Professional Journey -->
+        <section id="journey" class="journey-section">
+
+            <div class="journey-container">
+
+                <!-- Section Header -->
+                <div class="journey-header">
+                    <h2>My Journey</h2>
+                    <p>
+                        From learning the fundamentals to building
+                        software and beginning my professional career.
+                    </p>
+                </div>
+
+                <!-- Timeline -->
+                <div class="timeline">
+
+                    <!-- Milestone 1: Engineering -->
+                    <article class="timeline-item">
+                        <span class="timeline-year">2022 – 2026</span>
+
+                        <div class="timeline-content">
+                            <div class="timeline-logo">
+                                <img src="images/journey/karpagam.jpeg"
+                                     alt="Karpagam College of Engineering logo">
+                            </div>
+
+                            <h3>Started My Engineering Journey</h3>
+                            <h4>Karpagam College of Engineering</h4>
+
+                            <p class="timeline-description">
+                                Pursued B.E. in Computer Science and Design,
+                                building a strong foundation in programming,
+                                computer science and software development.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Milestone 2: Project Expo -->
+                    <article class="timeline-item">
+                        <span class="timeline-year">March 2024</span>
+
+                        <div class="timeline-content">
+                            <div class="timeline-logo">
+                                <img src="images/journey/project-expo.jpeg"
+                                     alt="Project Expo achievement icon">
+                            </div>
+
+                            <h3>First Prize – Project Expo</h3>
+                            <h4>Sri Krishna College of Technology</h4>
+
+                            <p class="timeline-description">
+                                Won first prize and a cash award of ₹5,000
+                                at the Project Expo.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Milestone 3: Academic Excellence -->
+                    <article class="timeline-item">
+                        <span class="timeline-year">May – July 2024</span>
+
+                        <div class="timeline-content">
+                            <div class="timeline-logo">
+                                <img src="images/journey/manipal-research.jpeg"
+                                     alt="Academic achievement and research icon">
+                            </div>
+
+                            <h3>Academic Excellence & Research</h3>
+                            <h4>Karpagam College / Manipal Institute of Technology</h4>
+
+                            <p class="timeline-description">
+                                Secured first rank in the 3rd and 4th semesters
+                                and presented and published a research paper
+                                at an international conference.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Milestone 4: Certifications -->
+                    <article class="timeline-item">
+                        <span class="timeline-year">2024 – 2025</span>
+
+                        <div class="timeline-content">
+                            <div class="timeline-logo">
+                                <img src="images/journey/certifications.jpeg"
+                                     alt="Technical certifications icon">
+                            </div>
+
+                            <h3>Expanding Technical Skills</h3>
+                            <h4>Certifications & Technical Learning</h4>
+
+                            <p class="timeline-description">
+                                Earned certifications in Java, JavaScript,
+                                React, CSS, MongoDB, API development and
+                                database management.
+                            </p>
+
+                            <div class="timeline-more" hidden>
+                                <p>
+                                    Certifications include HackerRank,
+                                    JPMorgan Chase Software Engineering,
+                                    Amazon Database Management with Java
+                                    and SQL, MongoDB, Postman API Student
+                                    Expert and IIT Bombay Java Programming.
+                                </p>
+                            </div>
+
+                            <button class="show-more-btn"
+                                    type="button"
+                                    aria-expanded="false">
+                                Show more
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Milestone 5: LegacyBank -->
+                    <article class="timeline-item">
+                        <span class="timeline-year">January 2025</span>
+
+                        <div class="timeline-content">
+                            <div class="timeline-logo">
+                                <img src="images/journey/legacybank.jpeg"
+                                     alt="LegacyBank project logo">
+                            </div>
+
+                            <h3>Built LegacyBank</h3>
+                            <h4>Personal Software Development Project</h4>
+
+                            <p class="timeline-description">
+                                Developed a secure online banking system
+                                using Spring Boot, Spring Security,
+                                Thymeleaf and MySQL, implementing
+                                authentication and core banking features.
+                            </p>
+
+                            <div class="timeline-more" hidden>
+                                <p>
+                                    Optimized data access using Hibernate
+                                    and Spring Data JPA, improving query
+                                    efficiency and transaction handling.
+                                </p>
+                            </div>
+
+                            <button class="show-more-btn"
+                                    type="button"
+                                    aria-expanded="false">
+                                Show more
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Milestone 6: Open Source and LeetCode -->
+                    <article class="timeline-item">
+                        <span class="timeline-year">2025 – Present</span>
+
+                        <div class="timeline-content">
+                            <div class="timeline-logo">
+                                <img src="images/journey/leetcode.jpeg"
+                                     alt="LeetCode problem solving icon">
+                            </div>
+
+                            <h3>Open Source & Problem Solving</h3>
+                            <h4>Open Source Community / LeetCode</h4>
+
+                            <p class="timeline-description">
+                                Contributed to open-source projects and
+                                solved 300+ LeetCode problems, continuously
+                                strengthening problem-solving skills.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Milestone 7: Software Engineering Simulation -->
+                    <article class="timeline-item">
+                        <span class="timeline-year">February 2026</span>
+
+                        <div class="timeline-content">
+                            <div class="timeline-logo">
+                                <img src="images/journey/software-engineering.jpeg"
+                                     alt="Software engineering simulation icon">
+                            </div>
+
+                            <h3>Advanced Software Engineering Simulation</h3>
+                            <h4>Professional Job Simulation</h4>
+
+                            <p class="timeline-description">
+                                Completed an Advanced Software Engineering
+                                Job Simulation, gaining exposure to
+                                industry-oriented engineering practices.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Milestone 8: Psiog Digital -->
+                    <article class="timeline-item">
+                        <span class="timeline-year">August 2026 – Present</span>
+
+                        <div class="timeline-content">
+                            <div class="timeline-logo">
+                                <img src="images/journey/psiog.jpeg"
+                                     alt="Psiog Digital logo">
+                            </div>
+
+                            <h3>Started My Professional Career</h3>
+                            <h4>Psiog Digital</h4>
+
+                            <p class="timeline-description">
+                                Joined Psiog Digital and began my
+                                professional journey, transitioning
+                                from academic learning into the
+                                software industry.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
         </section>
+
+
+
 
         <!-- 03. Personal Interests -->
-        <section id="interests">
+        <section id="interests" class="interests-section">
+
+            <div class="interests-container">
+
+                <!-- Section Header -->
+                <div class="interests-header">
+                    <span class="interests-label">BEYOND THE EVERYDAY</span>
+
+                    <h2>
+                        Things That <span>Interest Me.</span>
+                    </h2>
+
+                    <p>
+                        A little bit of everything, a lot of curiosity.
+                        Here's a glimpse into the things I love learning,
+                        questioning and exploring.
+                    </p>
+                </div>
+
+                <!-- Interests Bento Grid -->
+                <div class="interests-grid">
+
+                    <!-- 01. Psychology -->
+                    <article class="interest-card interest-psychology">
+
+                        <div class="interest-card-visual" aria-hidden="true">
+                            ◉
+                        </div>
+
+                        <div class="interest-card-content">
+                            <span class="interest-number">01 / THE MIND</span>
+
+                            <h3>Psychology & Metacognition</h3>
+
+                            <p>
+                                Fascinated by how the human mind works,
+                                how people think and what happens when
+                                we start thinking about our own thinking.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 02. Curiosity -->
+                    <article class="interest-card interest-curiosity">
+
+                        <div class="interest-card-visual" aria-hidden="true">
+                            ?
+                        </div>
+
+                        <div class="interest-card-content">
+                            <span class="interest-number">02 / THE UNKNOWN</span>
+
+                            <h3>Curiosity & Rabbit Holes</h3>
+
+                            <p>
+                                One random question can lead to hours
+                                of research. I love digging deeper into
+                                unusual topics and discovering things
+                                I never knew I wanted to know.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 03. Sacred Geometry -->
+                    <article class="interest-card interest-geometry">
+
+                        <div class="interest-card-visual" aria-hidden="true">
+                            ✳
+                        </div>
+
+                        <div class="interest-card-content">
+                            <span class="interest-number">03 / PATTERNS & HISTORY</span>
+
+                            <h3>Sacred Geometry</h3>
+
+                            <p>
+                                Exploring the history, mathematics and
+                                meaning behind Tibetan mandalas,
+                                Islamic geometric patterns and
+                                intricate forms of symmetry.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 04. Feminism -->
+                    <article class="interest-card interest-feminism">
+
+                        <div class="interest-card-visual" aria-hidden="true">
+                            ♀
+                        </div>
+
+                        <div class="interest-card-content">
+                            <span class="interest-number">04 / SOCIETY & CULTURE</span>
+
+                            <h3>Feminism & Society</h3>
+
+                            <p>
+                                Learning about feminism, questioning
+                                established norms and understanding
+                                how history, power and social structures
+                                shape the world we live in.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 05. Music -->
+                    <article class="interest-card interest-music">
+
+                        <div class="interest-card-visual" aria-hidden="true">
+                            ♪
+                        </div>
+
+                        <div class="interest-card-content">
+                            <span class="interest-number">05 / SOUND & EXPRESSION</span>
+
+                            <h3>Music Without Borders</h3>
+
+                            <p>
+                                From Carnatic classical and Western
+                                classical to indie and everything
+                                in between. Good music doesn't need
+                                to fit into one genre.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
         </section>
+
+
+
 
         <!-- 04. Family -->
-        <section id="family">
+        <section id="family" class="family-section">
+
+            <!-- Family Section Banner -->
+            <div class="family-banner">
+                <div class="family-container">
+                    <p class="family-eyebrow">A LITTLE ABOUT MY WORLD</p>
+                    <h2>MY PEOPLE</h2>
+                    <p class="family-intro">
+                        Different personalities, endless stories, and one little team
+                        I get to call family.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Family Members -->
+            <div class="family-container">
+
+                <div class="family-header">
+                    <h3>THE ONES AT HOME</h3>
+                    <p>Flip a card. There's a little story on the other side.</p>
+                </div>
+
+                <div class="family-grid">
+
+                    <!-- Mom Card -->
+                    <button class="family-card" type="button"
+                            aria-label="Flip to read about Mom"
+                            aria-pressed="false">
+
+                        <span class="family-card-inner">
+
+                            <span class="family-card-front">
+                                <img src="images/family/mom.jpeg"
+                                     alt="Illustrated portrait of my mom"
+                                     class="family-member-image">
+                                <span class="family-relationship">MY MOM</span>
+                                <span class="family-card-hint">FLIP TO KNOW MORE ↻</span>
+                            </span>
+
+                            <span class="family-card-back">
+                                <span class="family-card-title">THE ORIGINAL SUPERWOMAN</span>
+                                <span class="family-card-description">
+                                    A little bit of magic, a lot of love, and somehow a
+                                    solution to every problem. She can read my face before
+                                    I say a word, worry about the smallest things, and still
+                                    manage to take care of everyone. If there's one person
+                                    who deserves the title of GOAT, it's her.
+                                </span>
+                            </span>
+
+                        </span>
+                    </button>
+
+                    <!-- Dad Card -->
+                    <button class="family-card" type="button"
+                            aria-label="Flip to read about Dad"
+                            aria-pressed="false">
+
+                        <span class="family-card-inner">
+
+                            <span class="family-card-front">
+                                <img src="images/family/dad.jpeg"
+                                     alt="Illustrated portrait of my dad"
+                                     class="family-member-image">
+                                <span class="family-relationship">MY DAD</span>
+                                <span class="family-card-hint">FLIP TO KNOW MORE ↻</span>
+                            </span>
+
+                            <span class="family-card-back">
+                                <span class="family-card-title">THE MAN OF FEW WORDS</span>
+                                <span class="family-card-description">
+                                    Not every conversation needs a long speech. Sometimes
+                                    it's just a look, a small question, or a simple
+                                    "Have you eaten?" That's Dad. His way of showing love
+                                    may be different, but it's there in all the little
+                                    things. Pretty good, Dad. Pretty good!
+                                </span>
+                            </span>
+
+                        </span>
+                    </button>
+
+                    <!-- Elder Brother Card -->
+                    <button class="family-card" type="button"
+                            aria-label="Flip to read about my elder brother"
+                            aria-pressed="false">
+
+                        <span class="family-card-inner">
+
+                            <span class="family-card-front">
+                                <img src="images/family/bro.jpeg"
+                                     alt="Illustrated portrait of my elder brother"
+                                     class="family-member-image">
+                                <span class="family-relationship">MY ELDER BRO</span>
+                                <span class="family-card-hint">FLIP TO KNOW MORE ↻</span>
+                            </span>
+
+                            <span class="family-card-back">
+                                <span class="family-card-title">MY FAVOURITE HEADACHE</span>
+                                <span class="family-card-description">
+                                    Part-time rival, full-time troublemaker, and permanent
+                                    member of my team. We can argue over the most ridiculous
+                                    things and go back to normal five minutes later. He
+                                    gets on my nerves like nobody else, but life would be
+                                    seriously boring without him. Best brother?
+                                    Unfortunately, yes.
+                                </span>
+                            </span>
+
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+
         </section>
 
-        <!-- 05. Hobbies -->
-        <section id="hobbies">
+
+
+        <!-- 05. Hobbies & Passions -->
+        <section id="hobbies" class="hobbies-section">
+
+            <div class="hobbies-container">
+
+                <!-- Section Heading -->
+                <div class="hobbies-header">
+                    <span class="hobbies-label">BEYOND THE EVERYDAY</span>
+
+                    <h2 class="section-title">
+                        MY LITTLE <span class="outline-text">UNIVERSE</span>
+                    </h2>
+
+                    <p>
+                        A little art, a little music, a lot of experiments
+                        and countless ways to turn curiosity into creativity.
+                        Here's a glimpse of the things I love doing.
+                    </p>
+                </div>
+
+
+                <!-- Hobbies Gallery -->
+                <div class="hobbies-grid">
+
+                    <!-- 01. Art Playground -->
+                    <button class="hobby-card hobby-art"
+                            type="button"
+                            data-title="The Art Playground"
+                            data-description="Mandalas, doodles, pencil sketches, digital illustrations, wall paintings and even chalk sculptures. I love exploring different mediums and discovering how one idea can turn into a hundred different creations."
+                            aria-label="Explore The Art Playground">
+
+                        <img src="images/hobbies/art-playground.jpeg"
+                             alt="Collection of mandala art, sketches and illustrations"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">01 / CREATE</span>
+                            <span class="hobby-title">THE ART PLAYGROUND</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+
+                    <!-- 02. Music -->
+                    <button class="hobby-card hobby-music"
+                            type="button"
+                            data-title="Keys & Melodies"
+                            data-description="The keyboard is one of my favourite ways to express myself. From Indian classical compositions to Western classical pieces, I enjoy learning, practising and getting lost in melodies."
+                            aria-label="Explore Keys and Melodies">
+
+                        <img src="images/hobbies/keys-melodies.jpeg"
+                             alt="Musical keyboard with piano keys"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">02 / PLAY</span>
+                            <span class="hobby-title">KEYS & MELODIES</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+
+                    <!-- 03. Makeup & Face Painting -->
+                    <button class="hobby-card hobby-makeup"
+                            type="button"
+                            data-title="Faces as Canvases"
+                            data-description="Bridal makeup, creative makeup and face painting let me experiment with colours, details and imagination. I love the idea of transforming a face into a canvas for something unique."
+                            aria-label="Explore Faces as Canvases">
+
+                        <img src="images/hobbies/faces-as-canvases.jpeg"
+                             alt="Creative makeup and artistic face painting"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">03 / TRANSFORM</span>
+                            <span class="hobby-title">FACES AS CANVASES</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+
+                    <!-- 04. Henna Art -->
+                    <button class="hobby-card hobby-henna"
+                            type="button"
+                            data-title="Henna Stories"
+                            data-description="From intricate bridal mehendi to Arabic patterns and mandala-inspired henna, I enjoy turning simple lines into beautiful designs. Every pattern has its own little story."
+                            aria-label="Explore Henna Stories">
+
+                        <img src="images/hobbies/henna-stories.jpeg"
+                             alt="Intricate bridal henna and mandala designs"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">04 / DETAIL</span>
+                            <span class="hobby-title">HENNA STORIES</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+
+                    <!-- 05. Upcycling & Recycled Art -->
+                    <button class="hobby-card hobby-upcycling"
+                            type="button"
+                            data-title="Second Life Studio"
+                            data-description="Old CDs, PVC pipes, forgotten books, paper, glass bottles, glass plates and even eggshells can become art. I love giving discarded things a second life and finding beauty in the most unexpected materials."
+                            aria-label="Explore Second Life Studio">
+
+                        <img src="images/hobbies/second-life-studio.jpeg"
+                             alt="Handmade recycled art using glass, paper and reused materials"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">05 / REIMAGINE</span>
+                            <span class="hobby-title">SECOND LIFE STUDIO</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+
+                    <!-- 06. Podcasts & Learning -->
+                    <button class="hobby-card hobby-podcasts"
+                            type="button"
+                            data-title="Curious Ears"
+                            data-description="Science, self-growth, women's empowerment and everything in between. I enjoy listening to podcasts that introduce new perspectives, spark questions and leave me with something interesting to think about."
+                            aria-label="Explore Curious Ears">
+
+                        <img src="images/hobbies/curious-ears.jpeg"
+                             alt="Headphones and notebook representing podcast listening"
+                             class="hobby-image">
+
+                        <span class="hobby-card-overlay">
+                            <span class="hobby-number">06 / DISCOVER</span>
+                            <span class="hobby-title">CURIOUS EARS</span>
+                            <span class="hobby-hint">EXPLORE ↗</span>
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hobby Image Lightbox -->
+            <dialog class="hobby-lightbox"
+                    id="hobbyLightbox"
+                    aria-labelledby="lightboxTitle">
+
+                <button class="lightbox-close"
+                        type="button"
+                        aria-label="Close hobby preview">
+                    &times;
+                </button>
+
+                <div class="lightbox-content">
+
+                    <img src="images/hobbies/art-playground.jpeg"
+                         alt=""
+                         class="lightbox-image"
+                         id="lightboxImage">
+
+                    <div class="lightbox-details">
+                        <span class="lightbox-label">A LITTLE MORE ABOUT IT</span>
+
+                        <h3 id="lightboxTitle"></h3>
+
+                        <p id="lightboxDescription"></p>
+                    </div>
+
+                </div>
+
+            </dialog>
+
         </section>
+
 
     </main>
 
+
     <!-- 06. Footer -->
-    <footer id="footer">
+    <footer id="footer" class="site-footer">
+
+        <div class="footer-content">
+
+            <!-- Social Links -->
+            <div class="footer-socials">
+
+                <a href="https://www.linkedin.com/in/sowndhariya-saravanan-73465027b/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Visit my LinkedIn profile">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0
+                    2.76 2.24 5 5 5h14c2.76 0 5-2.24
+                    5-5v-14c0-2.76-2.24-5-5-5zM7.1
+                    20.5H3.6V9h3.5v11.5zM5.35
+                    7.4a2.03 2.03 0 1 1 0-4.06
+                    2.03 2.03 0 0 1 0 4.06zM20.5
+                    20.5H17v-5.6c0-1.34-.03-3.06-1.87-3.06
+                    -1.87 0-2.16 1.46-2.16 2.96v5.7h-3.5V9h3.36v1.57h.05
+                    c.47-.89 1.61-1.83 3.31-1.83
+                    3.54 0 4.2 2.33 4.2 5.36v6.4z" />
+                    </svg>
+
+                    <span>LinkedIn</span>
+                </a>
+
+
+                <a href="https://github.com/sowndhariyasugan"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Visit my GitHub profile">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 .5a12 12 0 0 0-3.79 23.39
+                    c.6.11.82-.26.82-.58v-2.05
+                    c-3.34.73-4.04-1.42-4.04-1.42
+                    -.55-1.39-1.33-1.76-1.33-1.76
+                    -1.09-.75.08-.74.08-.74
+                    1.2.08 1.84 1.23 1.84 1.23
+                    1.07 1.83 2.8 1.3 3.49.99
+                    .11-.77.42-1.3.76-1.6
+                    -2.67-.3-5.47-1.34-5.47-5.95
+                    0-1.31.47-2.38 1.24-3.22
+                    -.12-.3-.54-1.52.12-3.17
+                    0 0 1.01-.32 3.3 1.23
+                    a11.4 11.4 0 0 1 6 0
+                    c2.29-1.55 3.3-1.23 3.3-1.23
+                    .66 1.65.24 2.87.12 3.17
+                    .77.84 1.24 1.91 1.24 3.22
+                    0 4.62-2.8 5.65-5.48 5.95
+                    .43.37.81 1.1.81 2.22v3.29
+                    c0 .32.22.69.83.57A12 12 0 0 0 12 .5z" />
+                    </svg>
+
+                    <span>GitHub</span>
+                </a>
+
+
+                <a href="mailto:sowndhariya.saravanan@psiog.com"
+                   aria-label="Send me an email">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12
+                    c0 1.1.9 2 2 2h16c1.1 0 2-.9
+                    2-2V6c0-1.1-.9-2-2-2zm0 4-8 5
+                    -8-5V6l8 5 8-5v2z" />
+                    </svg>
+
+                    <span>Email</span>
+                </a>
+
+            </div>
+
+
+            <!-- Build Credit -->
+            <p class="footer-credit">
+                Built with HTML, CSS &amp; JS | Deployed via GitHub Actions
+            </p>
+
+
+            <!-- Copyright -->
+            <p class="footer-copyright">
+                &copy; <span id="copyrightYear"></span> Sowndhariya Saravanan.
+                All rights reserved.
+            </p>
+
+
+            <!-- Back to Top -->
+            <button type="button"
+                    class="back-to-top"
+                    id="backToTop"
+                    aria-label="Back to top">
+                &uarr;
+            </button>
+
+        </div>
+
     </footer>
 
+
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
 
 </body>
